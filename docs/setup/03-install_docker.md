@@ -92,6 +92,22 @@ systemctl daemon-reload && systemctl enable docker && systemctl start docker
 ### 可选-安装docker查询镜像 tag的小工具
 
 docker官方目前没有提供在命令行直接查询某个镜像的tag信息的方式，网上找来一个脚本工具，使用很方便。
+``` bash
+docker-tag  --  list all tags for a Docker image on a remote registry
+
+EXAMPLE:
+    - list all tags for ubuntu:
+       docker-tag tags ubuntu
+
+    - list all php tags containing apache:
+       docker-tag tags php apache
+
+    - list all images of harbor:
+       docker-tag get_images
+
+    - list all tags for harbor redis:
+       docker-tag get_tags redis/redis
+ ```      
 
 ``` bash
 $ docker-tag library/ubuntu
